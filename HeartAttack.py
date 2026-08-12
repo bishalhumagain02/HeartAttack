@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
-df= pd.read_csv(r"C:\Users\humag\OneDrive\Desktop\HeartAttackAnalysis\Heart Attack Data Set.csv")
+df= pd.read_csv(r"HeartAttack\Heart Attack Data Set.csv")
 print(df.describe())
 print(df.info())
+print(df.isnull().sum())
+print(df.head())
