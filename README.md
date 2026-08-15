@@ -39,20 +39,9 @@ From correlation analysis against `target` across the full cohort:
 - **Weakest predictors:** fasting blood sugar (`fbs`, r ≈ -0.03) and cholesterol (`chol`, r ≈ -0.09) show almost no linear relationship with diagnosis in this cohort, despite being commonly assumed risk factors.
 - Patients presenting with **asymptomatic chest pain** show a disproportionately high positive-diagnosis rate compared to typical angina — a counterintuitive pattern worth flagging for clinical review.
 
-## Dashboard 1: Interactive Web Dashboard
 
-Built as a single self-contained HTML file using **Chart.js**, with all 303 records embedded client-side — no backend, no build step, works offline.
 
-**Features:**
-- Live KPI strip (patient count, positive rate, avg age, avg max heart rate, avg cholesterol)
-- Cross-filtering by sex, chest pain type, diagnosis, and an age-range slider — every chart updates instantly
-- Diagnosis split, age distribution, chest-pain-type breakdown, max-heart-rate-vs-age scatter, vessels-blocked breakdown, and exercise-angina breakdown
-- A fixed "Risk Factor Signal Strength" panel showing computed correlation of every feature against diagnosis
-- Custom visual identity — dark clinical theme with an animated ECG waveform as the page's signature element, monospace data readouts
-
-**To run:** download `cardiac_risk_atlas.html` and open it in any modern browser.
-
-## Dashboard 2: Power BI Report
+## Dashboard 1: Power BI Report
 
 A 5-page Power BI report replicating the same analysis for users who prefer a native BI tool.
 
@@ -93,7 +82,6 @@ Avg Max HR       = AVERAGE(Heart[thalach])
 ## Tech Stack
 
 - **Analysis:** Python (pandas)
-- **Web dashboard:** HTML, CSS, vanilla JavaScript, Chart.js
 - **BI report:** Power BI Desktop, DAX
 - **Data:** UCI Heart Disease (Cleveland) dataset, 303 records
 
